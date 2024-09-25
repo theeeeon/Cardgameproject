@@ -1,0 +1,73 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\classes\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\classes\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\classes\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\classes\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Card.cs",
+              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Classes\\Card.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Classes\\Card.cs",
+              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Classes\\Card.cs",
+              "RelativeToolTip": "ConsoleApp1\\Classes\\Card.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T20:58:16.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Classes\\User.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Classes\\User.cs",
+              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Classes\\User.cs",
+              "RelativeToolTip": "ConsoleApp1\\Classes\\User.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T21:57:25.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Program.cs",
+              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Program.cs",
+              "RelativeToolTip": "ConsoleApp1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T21:52:10.545Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
