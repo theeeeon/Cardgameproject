@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//morggen moodle forum fragen erkundigen benni
-//methoden? was in abgabe? notation {get set}?
+
 
 namespace ConsoleApp1.Classes
 {
@@ -13,15 +12,12 @@ namespace ConsoleApp1.Classes
     {
         public string Name { get; private set; }
         public readonly int Damage;
-        public Type Elementtype { get; private set; }
+        public Card(string Name, int Damage)
+        {
+            this.Name = Name;
+            this.Damage = Damage;
+        }
 
 
-    }
-
-    enum Type
-    {
-        water,
-        fire,
-        normal
     }
 }
