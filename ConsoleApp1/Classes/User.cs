@@ -12,8 +12,8 @@ namespace ConsoleApp1.Classes
         private string Password;
         public int ELO { get; private set; }
         public int Money { get; private set; }
-        public List<Card> Deck { get; private set; }
-        public List<Card> Stack { get; private set; }
+        private List<Card> Deck = new List<Card>();
+        private List<Card> Stack = new List<Card>();
 
         public User(string username, string password)
         {
