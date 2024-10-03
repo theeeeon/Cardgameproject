@@ -1,4 +1,6 @@
-﻿using ConsoleApp1.Classes;
+﻿using System.Text.Json.Nodes;
+using ConsoleApp1.Classes;
+using Newtonsoft.Json;
 
 namespace ConsoleApp1
 {
@@ -6,7 +8,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            User Theo = new("theeeeon", "sehrgeheim");
+            
         }
     }
 }

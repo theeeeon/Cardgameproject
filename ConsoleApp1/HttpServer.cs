@@ -21,3 +21,13 @@ namespace ConsoleApp1
 
     }
 }
+
+var httpServer = new TcpListener(IPAddress.Loopback, 10001);
+httpServer.Start();
+
+while (true)
+{
+    // ----- 0. Accept the TCP-Client and create the reader and writer -----
+    var clientSocket = httpServer.AcceptTcpClient(); }
+
+//ru und handle im handle codebeispiel und response + request item 

@@ -14,5 +14,8 @@ namespace ConsoleApp1
         {
             this.reader = reader;
         }
+        //parse request (code aufteilen) content variable
     }
 }
+
+//metjod path content

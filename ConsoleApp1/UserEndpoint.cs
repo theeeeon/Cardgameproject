@@ -10,3 +10,5 @@ namespace ConsoleApp1
     {
     }
 }
+
+//handlerquesu mthod endpoint login register code message response.
