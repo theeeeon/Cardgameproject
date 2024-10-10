@@ -12,12 +12,22 @@ namespace ConsoleApp1.Classes
     {
         public string Name { get; private set; }
         public readonly int Damage;
-        public Card(string Name, int Damage)
+        public Spelltype type { get; private set; }
+        public Card(string Name, int Damage, Spelltype type)
         {
             this.Name = Name;
             this.Damage = Damage;
+            this.type = type;
         }
 
 
     }
+    enum Spelltype
+    {
+        water,
+        fire,
+        normal
+    }
+
+
 }

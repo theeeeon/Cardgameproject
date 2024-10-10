@@ -4,11 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace ConsoleApp1.httpserver.Endpoints
 {
     internal class UserEndpoint
     {
-    }
-}
+        public void register()
+        {
 
-//handlerquesu mthod endpoint login register code message response.
+        }
+        public void login()
+        {
+
+        }
+
+    }
+
+
+}

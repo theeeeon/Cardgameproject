@@ -9,10 +9,10 @@ namespace ConsoleApp1.Classes
 {
     class MonsterCard : Card
     {
-        public Monstertype type { get; private set; }
-        public MonsterCard(string Name, int Damage, Monstertype type) : base(Name, Damage)
+        public Monstertype mtype { get; private set; }
+        public MonsterCard(string Name, int Damage, Monstertype mtype, Spelltype stype) : base(Name, Damage, stype)
         {
-            this.type = type;
+            this.mtype = mtype;
         }
 
     }

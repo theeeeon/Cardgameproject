@@ -8,8 +8,8 @@ namespace ConsoleApp1.Classes
 {
     class User
     {
-        public string Username { get; private set; }
-        private string Password;
+        public string Username { get; private set; } = "";
+        public string Password { get; private set; } = "";
         public int ELO { get; private set; }
         public int Money { get; private set; }
         private List<Card> Deck = new List<Card>();
