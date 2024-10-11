@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace ConsoleApp1.Classes
+namespace ConsoleApp1.Models
 {
     class MonsterCard : Card
     {
@@ -24,7 +24,7 @@ namespace ConsoleApp1.Classes
         Knight,
         Ork,
         Kraken,
-        Wizard, 
+        Wizard,
         Goblin
     }
 }

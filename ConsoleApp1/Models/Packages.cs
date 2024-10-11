@@ -1,6 +1,4 @@
-﻿using ConsoleApp1.Classes;
-
-namespace ConsoleApp1.Models
+﻿namespace ConsoleApp1.Models
 {
     internal class Packages
     {

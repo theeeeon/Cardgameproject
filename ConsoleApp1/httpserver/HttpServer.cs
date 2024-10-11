@@ -6,8 +6,8 @@ using System.Net.Sockets;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using ConsoleApp1.Classes;
 using ConsoleApp1.httpserver.Endpoints;
+using ConsoleApp1.Models;
 
 namespace ConsoleApp1.httpserver
 {
@@ -37,24 +37,25 @@ namespace ConsoleApp1.httpserver
                 {
                     httpresponse.Code = "400";
                     httpresponse.Body = "Username or password missing.";
+                    httpresponse.handleresponse();
                 }
                 else if (httprequest.Method == "POST" && httprequest.Path == "/users")
                 {
-                    userendpoint.register();
+                    userendpoint.register(httpresponse, user);
                 }
                 else if (httprequest.Method == "POST" && httprequest.Path == "/sessions")
                 {
-                    userendpoint.login();
+                    userendpoint.login(httpresponse, user);
                 }
                 else
                 {
                     httpresponse.Code = "404";
-                    httpresponse.Body = "Path unknown.";
+                    httpresponse.Body = "Path/Method unknown.";
+                    httpresponse.handleresponse();
                 }
-                httpresponse.Code = "200";
-                httpresponse.handleresponse();
+
             }
-            
+
         }
 
 
@@ -64,4 +65,3 @@ namespace ConsoleApp1.httpserver
 
 //ru und handle im handle codebeispiel und response + request item 
 
-                

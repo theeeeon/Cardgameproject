@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using ConsoleApp1.Classes;
+using ConsoleApp1.Models;
 using System.Text.Json;
 
 namespace ConsoleApp1.httpserver
@@ -44,10 +44,10 @@ namespace ConsoleApp1.httpserver
                 Console.WriteLine(line);
                 if (line == "")
                 {
-                    break; 
+                    break;
                 }
 
-                
+
                 var parts_header = line.Split(':');
                 if (parts_header.Length == 2 && parts_header[0] == "Content-Length")
                 {
@@ -74,7 +74,7 @@ namespace ConsoleApp1.httpserver
 
 
         }
-        
+
     }
 }
 

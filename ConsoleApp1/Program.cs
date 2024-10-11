@@ -1,5 +1,7 @@
-﻿using System.Text.Json.Nodes;
-using ConsoleApp1.Classes;
+﻿using System.Net;
+using System.Text.Json.Nodes;
+using ConsoleApp1.Models;
+using ConsoleApp1.httpserver;
 using Newtonsoft.Json;
 
 namespace ConsoleApp1
@@ -8,7 +10,8 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            
+            HttpServer server = new HttpServer(IPAddress.Loopback, 10001);
+            server.Handle();
         }
     }
 }

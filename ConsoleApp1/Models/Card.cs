@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 
 
-namespace ConsoleApp1.Classes
+namespace ConsoleApp1.Models
 {
     abstract class Card
     {
