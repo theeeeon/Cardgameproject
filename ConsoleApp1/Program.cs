@@ -3,6 +3,7 @@ using System.Text.Json.Nodes;
 using ConsoleApp1.Models;
 using ConsoleApp1.httpserver;
 using Newtonsoft.Json;
+using Npgsql;
 
 namespace ConsoleApp1
 {
@@ -10,8 +11,8 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            HttpServer server = new HttpServer(IPAddress.Loopback, 10001);
-            server.Handle();
+            //HttpServer server = new HttpServer(IPAddress.Loopback, 10001);
+            //server.Handle();
         }
     }
 }
