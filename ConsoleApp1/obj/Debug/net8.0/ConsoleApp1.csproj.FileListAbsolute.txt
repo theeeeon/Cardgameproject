@@ -16,3 +16,6 @@ C:\Users\theow\Documents\Informatik Technikum Sem 3\SE 1 Sem 3\Projekt\ConsoleAp
 C:\Users\theow\Documents\Informatik Technikum Sem 3\SE 1 Sem 3\Projekt\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\theow\Documents\Informatik Technikum Sem 3\SE 1 Sem 3\Projekt\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.csproj.AssemblyReference.cache
 C:\Users\theow\Documents\Informatik Technikum Sem 3\SE 1 Sem 3\Projekt\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\ConsoleA.CB28C8CC.Up2Date
+C:\Users\theow\Documents\Informatik Technikum Sem 3\SE 1 Sem 3\Projekt\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\theow\Documents\Informatik Technikum Sem 3\SE 1 Sem 3\Projekt\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\theow\Documents\Informatik Technikum Sem 3\SE 1 Sem 3\Projekt\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\Npgsql.dll
