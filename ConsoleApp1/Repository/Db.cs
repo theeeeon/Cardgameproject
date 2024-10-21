@@ -40,7 +40,7 @@ namespace ConsoleApp1.Repository
                 {
                     cmd.CommandText = @"
                         CREATE TABLE IF NOT EXISTS Person (
-                            P_Id INT PRIMARY KEY, 
+                            P_Id SERIAL PRIMARY KEY, 
                             name VARCHAR(50) UNIQUE NOT NULL,
                             password VARCHAR(100) NOT NULL,
                             elo INT,
@@ -51,7 +51,7 @@ namespace ConsoleApp1.Repository
 
                     cmd.CommandText = @"
                         CREATE TABLE IF NOT EXISTS Card (
-                            C_Id INT PRIMARY KEY, 
+                            C_Id SERIAL PRIMARY KEY, 
                             name VARCHAR(50) NOT NULL,
                             damage INT NOT NULL,
                             spelltype VARCHAR(50) NOT NULL,

@@ -19,3 +19,11 @@ C:\Users\theow\Documents\Informatik Technikum Sem 3\SE 1 Sem 3\Projekt\ConsoleAp
 C:\Users\theow\Documents\Informatik Technikum Sem 3\SE 1 Sem 3\Projekt\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\theow\Documents\Informatik Technikum Sem 3\SE 1 Sem 3\Projekt\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\theow\Documents\Informatik Technikum Sem 3\SE 1 Sem 3\Projekt\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\Npgsql.dll
+C:\Users\theow\Documents\Informatik Technikum Sem 3\SE 1 Sem 3\Projekt\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\NUnit3.TestAdapter.dll
+C:\Users\theow\Documents\Informatik Technikum Sem 3\SE 1 Sem 3\Projekt\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\NUnit3.TestAdapter.pdb
+C:\Users\theow\Documents\Informatik Technikum Sem 3\SE 1 Sem 3\Projekt\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\nunit.engine.dll
+C:\Users\theow\Documents\Informatik Technikum Sem 3\SE 1 Sem 3\Projekt\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\nunit.engine.api.dll
+C:\Users\theow\Documents\Informatik Technikum Sem 3\SE 1 Sem 3\Projekt\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\nunit.engine.core.dll
+C:\Users\theow\Documents\Informatik Technikum Sem 3\SE 1 Sem 3\Projekt\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\testcentric.engine.metadata.dll
+C:\Users\theow\Documents\Informatik Technikum Sem 3\SE 1 Sem 3\Projekt\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\nunit.framework.dll
+C:\Users\theow\Documents\Informatik Technikum Sem 3\SE 1 Sem 3\Projekt\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\nunit.framework.legacy.dll
