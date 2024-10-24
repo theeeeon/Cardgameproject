@@ -26,7 +26,7 @@ namespace ConsoleApp1.Repository
                 {
                     command.CommandText = @"SELECT *
                                         FROM person
-                                        WHERE name = @username";
+                                        WHERE name = @name";
 
                     connection.Open();
 
@@ -52,7 +52,7 @@ namespace ConsoleApp1.Repository
                 {
                     command.CommandText = @"SELECT password
                                         FROM person
-                                        WHERE name = @username";
+                                        WHERE name = @name";
 
                     connection.Open();
 
@@ -78,7 +78,7 @@ namespace ConsoleApp1.Repository
             }
         }
 
-        public void Adduser(string password, string username)
+        public void Adduser(string password, string username)//durch zB trycatch prüfen
         {
             User user = new User(username, password);//hash außerhalb funktiom/schon mitgegeben
 
