@@ -53,3 +53,4 @@ namespace ConsoleApp1.Tests
 //kommt raus?ASsert.That(Equals(winner, card))
 
 //verschiedene testcases (sehen bei nuwebsite)
+//substitute.icard, interface icard, card.damage.returns(), lightsaber mock

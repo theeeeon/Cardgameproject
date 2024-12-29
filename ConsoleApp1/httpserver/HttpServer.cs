@@ -29,31 +29,10 @@ namespace ConsoleApp1.httpserver
                 using var writer = new StreamWriter(clientSocket.GetStream()) { AutoFlush = true };
                 using var reader = new StreamReader(clientSocket.GetStream());
                 var httpresponse = new HttpResponse(writer);
-                var httprequest = new HttpRequest(reader);
                 var userendpoint = new UserEndpoint();
-                httprequest.handlerequest();
-                var user = JsonSerializer.Deserialize<User>(httprequest.Body);
-                if (user == null || user.Username == "" || user.Password == "")
-                {
-                    httpresponse.Code = "400";
-                    httpresponse.Body = "Username or password missing.";
-                    httpresponse.handleresponse();
-                }
-                else if (httprequest.Method == "POST" && httprequest.Path == "/users")
-                {
-                    userendpoint.register(httpresponse, user);
-                }
-                else if (httprequest.Method == "POST" && httprequest.Path == "/sessions")
-                {
-                    userendpoint.login(httpresponse, user);
-                }
-                else
-                {
-                    httpresponse.Code = "404";
-                    httpresponse.Body = "Path/Method unknown.";
-                    httpresponse.handleresponse();
-                }
-
+                var httprequest = new HttpRequest(reader, httpresponse, userendpoint);
+                Thread thread = new Thread(httprequest.handlerequest);
+                thread.Start();
             }
 
         }

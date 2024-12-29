@@ -17,11 +17,6 @@ namespace ConsoleApp1
             Db.Db_init(DBCONNECTIONSTRING);
             //HttpServer server = new HttpServer(IPAddress.Loopback, 10001);
             //server.Handle();
-            UserRepository repository = new UserRepository("Host=localhost;Username=theowendel;Password=swen1;Database=projektdb");
-
-            repository.Adduser("passwordtest", "testuser");
-
-            repository.Checkusernameexists("testuser");
         }
     }
 }

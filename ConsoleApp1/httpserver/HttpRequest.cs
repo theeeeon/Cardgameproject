@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ConsoleApp1.Models;
 using System.Text.Json;
+using ConsoleApp1.httpserver.Endpoints;
 
 namespace ConsoleApp1.httpserver
 {
@@ -15,17 +16,44 @@ namespace ConsoleApp1.httpserver
         public string Method;
         public string Path;
         public string Body;
+        private HttpResponse httpresponse;
+        private UserEndpoint userendpoint;
 
 
-        public HttpRequest(StreamReader reader)
+        public HttpRequest(StreamReader reader, HttpResponse httpresponse, UserEndpoint userendpoint)
         {
             this.reader = reader;
+            this.httpresponse = httpresponse;
+            this.userendpoint = userendpoint;
             Method = "";
             Path = "";
             Body = "";
         }
         public void handlerequest()
         {
+
+            var user = JsonSerializer.Deserialize<User>(Body);
+            if (user == null || user.Username == "" || user.Password == "")
+            {
+                httpresponse.Code = "400";
+                httpresponse.Body = "Username or password missing.";
+                httpresponse.handleresponse();
+            }
+            else if (Method == "POST" && Path == "/users")
+            {
+                userendpoint.register(httpresponse, user);
+            }
+            else if (Method == "POST" && Path == "/sessions")
+            {
+                userendpoint.login(httpresponse, user);
+            }
+            else
+            {
+                httpresponse.Code = "404";
+                httpresponse.Body = "Path/Method unknown.";
+                httpresponse.handleresponse();
+            }
+
             string? line = reader.ReadLine();
             if (line != null)
             {

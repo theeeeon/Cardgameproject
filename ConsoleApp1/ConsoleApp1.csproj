@@ -20,4 +20,9 @@
     <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Battle Logic\" />
+    <Folder Include="Business Logic\" />
+  </ItemGroup>
+
 </Project>
