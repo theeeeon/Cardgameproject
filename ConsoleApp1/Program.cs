@@ -15,8 +15,8 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Db.Db_init(DBCONNECTIONSTRING);
-            //HttpServer server = new HttpServer(IPAddress.Loopback, 10001);
-            //server.Handle();
+            HttpServer server = new HttpServer(IPAddress.Loopback, 10001, DBCONNECTIONSTRING);
+            server.Handle();
         }
     }
 }

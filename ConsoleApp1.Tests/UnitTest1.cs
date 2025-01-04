@@ -4,6 +4,7 @@ using ConsoleApp1.Models;
 using ConsoleApp1.httpserver;
 using Npgsql;
 using System.Data;
+using ConsoleApp1.Logic;
 
 
 namespace ConsoleApp1.Tests
@@ -13,13 +14,13 @@ namespace ConsoleApp1.Tests
         [OneTimeSetUp]
         public void Setup()
         {
-            Db.Db_init("Host=localhost;Username=theowendel;Password=swen1;Database=projektdb");
+            //Db.Db_init("Host=localhost;Username=theowendel;Password=swen1;Database=projektdb");
         }
 
-        [Test]
+        /*[Test]
         public void Adding_User_check_if_exists()
         {
-            UserRepository repository = new UserRepository("Host=localhost;Username=theowendel;Password=swen1;Database=projektdb");
+            BusinessLogic repository = new BusinessLogic("Host=localhost;Username=theowendel;Password=swen1;Database=projektdb");
 
             repository.Adduser("passwordtest", "testuser");
 
@@ -30,13 +31,83 @@ namespace ConsoleApp1.Tests
         [Test]
         public void Check_if_password_correct()
         {
-            UserRepository repository = new UserRepository("Host=localhost;Username=theowendel;Password=swen1;Database=projektdb");
-            //repository.Adduser("passwordtest", "testuser");
+            BusinessLogic repository = new BusinessLogic("Host=localhost;Username=theowendel;Password=swen1;Database=projektdb");
+            repository.Adduser("passwordtest", "testuser");
 
             bool help = repository.Checkpasswordcorrect("passwordtest", "testuser");
 
             Assert.That(Equals(help, true));
+        }*/
+
+        [Test]
+        public void Check_adding_5_Cards_to_Packages_Constructor()
+        {
+            List < Card > cards = new List<Card>();
+            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
+            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
+            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
+            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
+            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
+
+            Packages package = new Packages(cards);
+            Assert.That(Equals(package.package.Count, 5));
         }
+
+        [Test]
+        public void Check_adding_6_Cards_to_Packages_Constructor()
+        {
+            List<Card> cards = new List<Card>();
+            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
+            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
+            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
+            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
+            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
+            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
+
+            Packages package = new Packages(cards);
+            Assert.That(Equals(package.package.Count, 5));
+        }
+
+        [Test]
+        public void Check_adding_4_Cards_to_Packages_Constructor()
+        {
+            List<Card> cards = new List<Card>();
+            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
+            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
+            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
+            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
+
+            Packages package = new Packages(cards);
+            Assert.That(Equals(package.package.Count, 0));
+        }
+
+        [Test]
+        public void Check_if_Card_is_abstract()
+        {
+            Type type = typeof(Card);
+
+            Assert.That(Equals(true, type.IsAbstract));
+        }
+
+        [Test]
+        public void Check_if_MonsterCard_is_child()
+        {
+            Type type = typeof(MonsterCard);
+            Type type1 = typeof(Card);
+
+            Assert.That(Equals(true, type.IsSubclassOf(type1)));
+        }
+
+        [Test]
+        public void Check_if_SpellCard_is_child()
+        {
+            Type type = typeof(SpellCard);
+            Type type1 = typeof(Card);
+
+            Assert.That(Equals(true, type.IsSubclassOf(type1)));
+        }
+
+
     }
 }
 

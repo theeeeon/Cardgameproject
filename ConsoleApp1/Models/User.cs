@@ -14,6 +14,7 @@ namespace ConsoleApp1.Models
         public int Money { get; private set; }
         private List<Card> Deck = new List<Card>();
         private List<Card> Stack = new List<Card>();
+        private List<List<Card>> Packages = new List<List<Card>>();
 
         public User(string username, string password)
         {

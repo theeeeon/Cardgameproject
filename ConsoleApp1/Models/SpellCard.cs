@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.Models
 {
-    class SpellCard : Card
+    public class SpellCard : Card
     {
-        public SpellCard(string Name, int Damage, Spelltype type) : base(Name, Damage, type)
+        public SpellCard(string ID,string Name, int Damage, Spelltype type) : base(ID, Name, Damage, type)
         {
 
         }

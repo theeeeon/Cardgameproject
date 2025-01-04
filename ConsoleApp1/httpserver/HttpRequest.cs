@@ -17,42 +17,20 @@ namespace ConsoleApp1.httpserver
         public string Path;
         public string Body;
         private HttpResponse httpresponse;
-        private UserEndpoint userendpoint;
+        public string DBCONNECTIONSTRING;
 
 
-        public HttpRequest(StreamReader reader, HttpResponse httpresponse, UserEndpoint userendpoint)
+        public HttpRequest(StreamReader reader, HttpResponse httpresponse, string DBCONNECTIONSTRING)
         {
             this.reader = reader;
             this.httpresponse = httpresponse;
-            this.userendpoint = userendpoint;
             Method = "";
             Path = "";
             Body = "";
+            this.DBCONNECTIONSTRING = DBCONNECTIONSTRING;
         }
         public void handlerequest()
         {
-
-            var user = JsonSerializer.Deserialize<User>(Body);
-            if (user == null || user.Username == "" || user.Password == "")
-            {
-                httpresponse.Code = "400";
-                httpresponse.Body = "Username or password missing.";
-                httpresponse.handleresponse();
-            }
-            else if (Method == "POST" && Path == "/users")
-            {
-                userendpoint.register(httpresponse, user);
-            }
-            else if (Method == "POST" && Path == "/sessions")
-            {
-                userendpoint.login(httpresponse, user);
-            }
-            else
-            {
-                httpresponse.Code = "404";
-                httpresponse.Body = "Path/Method unknown.";
-                httpresponse.handleresponse();
-            }
 
             string? line = reader.ReadLine();
             if (line != null)
@@ -67,6 +45,7 @@ namespace ConsoleApp1.httpserver
             }
 
             int content_length = 0;
+            String Authorization = "";
             while ((line = reader.ReadLine()) != null)
             {
                 Console.WriteLine(line);
@@ -80,6 +59,10 @@ namespace ConsoleApp1.httpserver
                 if (parts_header.Length == 2 && parts_header[0] == "Content-Length")
                 {
                     content_length = int.Parse(parts_header[1].Trim());
+                }
+                if (parts_header.Length == 2 && parts_header[0] == "Authorization")
+                {
+                    Authorization = parts_header[1].Trim();
                 }
             }
 
@@ -100,6 +83,55 @@ namespace ConsoleApp1.httpserver
                 Body = data.ToString();
             }
 
+            User user = new User("", "");
+            if (Path == "/users" || Path == "/sessions")
+            {
+                user = JsonSerializer.Deserialize<User>(Body);
+            }
+
+            
+            UserEndpoint userendpoint = new UserEndpoint();
+            CardEndpoint cardendpoint = new CardEndpoint();
+            Dictionary<string, Action> paths_and_endpoints = new Dictionary<string, Action> {
+
+                {"/users", () => userendpoint.users(httpresponse, user, Method, DBCONNECTIONSTRING)},
+                {"/sessions", () => userendpoint.sessions(httpresponse, user, Method, DBCONNECTIONSTRING)},
+                {"/packages", () => cardendpoint.packages()  }
+
+            };
+
+            if (paths_and_endpoints.ContainsKey(Path))
+            {
+                paths_and_endpoints[Path]();
+            }
+            else
+            {
+                httpresponse.Code = "404 - Path unknown";
+                httpresponse.Body = "";
+                httpresponse.handleresponse();
+            }
+
+            
+            /*if (user == null || user.Username == "" || user.Password == "")
+            {
+                httpresponse.Code = "400";
+                httpresponse.Body = "Username or password missing.";
+                httpresponse.handleresponse();
+            }
+            else if (Method == "POST" && Path == "/users")
+            {
+                userendpoint.users(httpresponse, user, Method);
+            }
+            else if (Method == "POST" && Path == "/sessions")
+            {
+                userendpoint.sessions(httpresponse, user, Method);
+            }
+            else
+            {
+                httpresponse.Code = "404";
+                httpresponse.Body = "Path/Method unknown.";
+                httpresponse.handleresponse();
+            }*/
 
         }
 

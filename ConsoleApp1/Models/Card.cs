@@ -8,13 +8,15 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.Models
 {
-    abstract class Card
+    public abstract class Card
     {
+        public string ID;
         public string Name { get; private set; }
         public readonly int Damage;
         public Spelltype type { get; private set; }
-        public Card(string Name, int Damage, Spelltype type)
+        public Card(string ID, string Name, int Damage, Spelltype type)
         {
+            this.ID = ID;
             this.Name = Name;
             this.Damage = Damage;
             this.type = type;
@@ -22,7 +24,7 @@ namespace ConsoleApp1.Models
 
 
     }
-    enum Spelltype
+    public enum Spelltype
     {
         water,
         fire,

@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.Models
 {
-    class MonsterCard : Card
+    public class MonsterCard : Card
     {
         public Monstertype mtype { get; private set; }
-        public MonsterCard(string Name, int Damage, Monstertype mtype, Spelltype stype) : base(Name, Damage, stype)
+        public MonsterCard(string ID, string Name, int Damage, Monstertype mtype, Spelltype stype) : base(ID, Name, Damage, stype)
         {
             this.mtype = mtype;
         }
 
     }
 
-    enum Monstertype
+    public enum Monstertype
     {
         Dragon,
         Fireelf,
@@ -25,6 +25,7 @@ namespace ConsoleApp1.Models
         Ork,
         Kraken,
         Wizard,
-        Goblin
+        Goblin,
+        Spell
     }
 }

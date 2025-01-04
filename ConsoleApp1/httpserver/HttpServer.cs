@@ -14,10 +14,12 @@ namespace ConsoleApp1.httpserver
     class HttpServer
     {
         private TcpListener httpServer;
+        private string DBCONNECTIONSTRING;
 
-        public HttpServer(IPAddress ip, int port)
+        public HttpServer(IPAddress ip, int port, string DBCONNECTIONSTRING)
         {
             httpServer = new TcpListener(ip, port);
+            this.DBCONNECTIONSTRING = DBCONNECTIONSTRING;
         }
 
         public void Handle()
@@ -29,10 +31,10 @@ namespace ConsoleApp1.httpserver
                 using var writer = new StreamWriter(clientSocket.GetStream()) { AutoFlush = true };
                 using var reader = new StreamReader(clientSocket.GetStream());
                 var httpresponse = new HttpResponse(writer);
-                var userendpoint = new UserEndpoint();
-                var httprequest = new HttpRequest(reader, httpresponse, userendpoint);
-                Thread thread = new Thread(httprequest.handlerequest);
-                thread.Start();
+                var httprequest = new HttpRequest(reader, httpresponse, DBCONNECTIONSTRING);
+                //Thread thread = new Thread(() => );
+                //thread.Start();
+                httprequest.handlerequest();
             }
 
         }
