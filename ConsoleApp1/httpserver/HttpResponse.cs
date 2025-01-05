@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.httpserver
 {
-    class HttpResponse
+    public class HttpResponse
     {
         private StreamWriter writer;
         public string Code;

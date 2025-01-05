@@ -8,7 +8,7 @@ namespace ConsoleApp1.Models
 {
     public class SpellCard : Card
     {
-        public SpellCard(string ID,string Name, int Damage, Spelltype type) : base(ID, Name, Damage, type)
+        public SpellCard(string ID,string Name, double Damage, string type) : base(ID, Name, Damage, type)
         {
 
         }

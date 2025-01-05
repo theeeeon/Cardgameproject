@@ -9,8 +9,8 @@ using Npgsql;
 
 namespace ConsoleApp1.Logic
 {
-    public class BusinessLogic
-    {
+        public class BusinessLogic
+        {
             private readonly string connectionstring;
 
             public BusinessLogic(string connectionstring)
@@ -120,21 +120,11 @@ namespace ConsoleApp1.Logic
 
             }
 
-            public void Addcard(string ID, string name, int damage, Spelltype spelltype, Monstertype? monstertype = null)
+            public void Addcard(string ID, string name, double damage, string spelltype, string monstertype)
             {
-                List <Card> Card = new List<Card>();
-                Monstertype type = Monstertype.Spell;
+                
 
-                if (monstertype.HasValue)
-                {
-                    Card card = new MonsterCard(ID, name, damage, monstertype.Value, spelltype);
-                    Card.Add(card);
-                    type = monstertype.Value;
-                }
-                else { 
-                    Card card = new SpellCard(ID, name, damage, spelltype);
-                    Card.Add(card);
-                }
+                Card card = new MonsterCard(ID, name, damage, monstertype, spelltype);
                 
     
                 using (IDbConnection connection = new NpgsqlConnection(connectionstring))
@@ -149,31 +139,31 @@ namespace ConsoleApp1.Logic
                         var p_ID = command.CreateParameter();
                         p_ID.DbType = DbType.String;
                         p_ID.ParameterName = "CardID";
-                        p_ID.Value = Card[0].ID;
+                        p_ID.Value = card.ID;
                         command.Parameters.Add(p_ID);
 
                     var p_name = command.CreateParameter();
                         p_name.DbType = DbType.String;
                         p_name.ParameterName = "name";
-                        p_name.Value = Card[0].Name;
+                        p_name.Value = card.Name;
                         command.Parameters.Add(p_name);
 
                         var p_damage = command.CreateParameter();
                         p_damage.DbType = DbType.Int32;
                         p_damage.ParameterName = "damage";
-                        p_damage.Value = Card[0].Damage;
+                        p_damage.Value = card.Damage;
                         command.Parameters.Add(p_damage);
 
                         var p_spelltype = command.CreateParameter();
                         p_spelltype.DbType = DbType.String;
                         p_spelltype.ParameterName = "spelltype";
-                        p_spelltype.Value = Card[0].type;
+                        p_spelltype.Value = card.Spelltype;
                         command.Parameters.Add(p_spelltype);
 
                         var p_monstertype = command.CreateParameter();
                         p_monstertype.DbType = DbType.String;
-                        p_monstertype.ParameterName = "coins";
-                        p_monstertype.Value = type;
+                        p_monstertype.ParameterName = "monstertype";
+                        p_monstertype.Value = monstertype;
                         command.Parameters.Add(p_monstertype);
 
                         command.ExecuteNonQuery();
@@ -184,6 +174,14 @@ namespace ConsoleApp1.Logic
 
             public void Addpackage(List<Card> package)
             {
+                foreach (Card card in package) {
+                    if (card.Spelltype == null)
+                    {
+                        card.Spelltype = "";
+                    }
+                Addcard(card.ID, card.Name, card.Damage, card.Spelltype, "");
+                }
+
                 using (IDbConnection connection = new NpgsqlConnection(connectionstring))
                 {
                     using (IDbCommand command = connection.CreateCommand())
@@ -202,7 +200,7 @@ namespace ConsoleApp1.Logic
                         var Card2 = command.CreateParameter();
                         Card2.DbType = DbType.String;
                         Card2.ParameterName = "Card2";
-                        Card2.Value = package[2].ID;
+                        Card2.Value = package[1].ID;
                         command.Parameters.Add(Card2);
 
                         var Card3 = command.CreateParameter();
@@ -226,7 +224,192 @@ namespace ConsoleApp1.Logic
                         command.ExecuteNonQuery();
                     }
                 }
+            }
+
+            
+
+            public List<string> Getanddeletepackage()
+            {
+            int Id = 0;
+            List<string> package = new List<string>();
+            using (IDbConnection connection = new NpgsqlConnection(connectionstring))
+            {
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = @"SELECT Pa_Id, Card1, Card2, Card3, Card4, Card5
+                                        FROM Packages
+                                        ";
+
+                    connection.Open();
+
+                    using (IDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            Id = (int)reader["Pa_Id"];
+                            package.Add(reader["Card1"].ToString());
+                            package.Add(reader["Card2"].ToString());
+                            package.Add(reader["Card3"].ToString());
+                            package.Add(reader["Card4"].ToString());
+                            package.Add(reader["Card5"].ToString());
+                            Deletepackage(Id);
+                        }
+                        
+                    }
+                }
+            }
+
+            return package;
+            }
+
+            public void Addtostack(string username, string CardID)
+            {
+            using (IDbConnection connection = new NpgsqlConnection(connectionstring))
+            {
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    connection.Open();
+                    command.CommandText = @"INSERT INTO Stack (Name, CardID)
+                                            VALUES (@Name, @CardID)"
+                    ;
+
+                    var name = command.CreateParameter();
+                    name.DbType = DbType.String;
+                    name.ParameterName = "Name";
+                    name.Value = username;
+                    command.Parameters.Add(name);
+
+                    var ID = command.CreateParameter();
+                    ID.DbType = DbType.String;
+                    ID.ParameterName = "CardID";
+                    ID.Value = CardID;
+                    command.Parameters.Add(ID);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+            
+
+            public void Buypackage(string username)
+            {
+
+            if (Checkmoney(username) == false)
+            {
+                throw new Exception("Money");
+            }
+            else
+            {
+                List<string> package = Getanddeletepackage();
+
+                if(package.Count == 0)
+                {
+                    throw new Exception("No Package");
+                }
+
+                foreach (string name in package)
+                {
+                    Addtostack(username, name);
+                }
+                Paymoney(username);
+            }
+            }
+
+            public bool Checkmoney(string username)
+            {
+            using (IDbConnection connection = new NpgsqlConnection(connectionstring))
+            {
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    connection.Open();
+                    command.CommandText = @"SELECT coins
+                                FROM Person
+                                WHERE name = @name"
+                    ;
+
+                    var name = command.CreateParameter();
+                    name.DbType = DbType.String;
+                    name.ParameterName = "name";
+                    name.Value = username;
+                    command.Parameters.Add(name);
+
+                    command.ExecuteNonQuery();
+
+                    using (IDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+
+                            /*ConsoleColor originalColor = Console.ForegroundColor;
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine((int)reader["coins"]);
+                            Console.ForegroundColor = originalColor;*/
+
+                            if ((int)reader["coins"] > 4)
+                            {
+                                return true;
+                            }
+                            else
+                            {
+                                return false;
+                            }
+                        }
+                        else
+                        {
+                            return false;
+                        }
+
+                    }
+                }
+            }
+
+        }
+
+            public void Paymoney(string username)
+            {
+            using (IDbConnection connection = new NpgsqlConnection(connectionstring))
+            {
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    connection.Open();
+                    command.CommandText = @"UPDATE Person
+                                SET coins = coins - 5
+                                WHERE name = @name"
+                    ;
+
+                    var name = command.CreateParameter();
+                    name.DbType = DbType.String;
+                    name.ParameterName = "name";
+                    name.Value = username;
+                    command.Parameters.Add(name);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+
+            }
+
+            public void Deletepackage(int ID)
+            {
+            using (IDbConnection connection = new NpgsqlConnection(connectionstring))
+            {
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    connection.Open();
+                    command.CommandText = @"DELETE FROM Packages
+                                            WHERE Pa_Id = @Pa_Id"
+                    ;
+
+                    var id = command.CreateParameter();
+                    id.DbType = DbType.Int32;
+                    id.ParameterName = "Pa_Id";
+                    id.Value = ID;
+                    command.Parameters.Add(id);
+
+                    command.ExecuteNonQuery();
+                }
+            }
         }
 
         }
-    }
+}

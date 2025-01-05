@@ -2,9 +2,12 @@ using System.ComponentModel.DataAnnotations;
 using ConsoleApp1.Repository;
 using ConsoleApp1.Models;
 using ConsoleApp1.httpserver;
+using ConsoleApp1.httpserver.Endpoints;
 using Npgsql;
 using System.Data;
 using ConsoleApp1.Logic;
+using System.Net.Sockets;
+using System.Net;
 
 
 namespace ConsoleApp1.Tests
@@ -43,11 +46,11 @@ namespace ConsoleApp1.Tests
         public void Check_adding_5_Cards_to_Packages_Constructor()
         {
             List < Card > cards = new List<Card>();
-            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
-            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
-            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
-            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
-            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
+            cards.Add(new SpellCard("1", "1", 1, "normal"));
+            cards.Add(new SpellCard("1", "1", 1, "normal"));
+            cards.Add(new SpellCard("1", "1", 1, "normal"));
+            cards.Add(new SpellCard("1", "1", 1, "normal"));
+            cards.Add(new SpellCard("1", "1", 1, "normal"));
 
             Packages package = new Packages(cards);
             Assert.That(Equals(package.package.Count, 5));
@@ -57,12 +60,12 @@ namespace ConsoleApp1.Tests
         public void Check_adding_6_Cards_to_Packages_Constructor()
         {
             List<Card> cards = new List<Card>();
-            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
-            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
-            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
-            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
-            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
-            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
+            cards.Add(new SpellCard("1", "1", 1, "normal"));
+            cards.Add(new SpellCard("1", "1", 1, "normal"));
+            cards.Add(new SpellCard("1", "1", 1, "normal"));
+            cards.Add(new SpellCard("1", "1", 1, "normal"));
+            cards.Add(new SpellCard("1", "1", 1, "normal"));
+            cards.Add(new SpellCard("1", "1", 1, "normal"));
 
             Packages package = new Packages(cards);
             Assert.That(Equals(package.package.Count, 5));
@@ -72,10 +75,10 @@ namespace ConsoleApp1.Tests
         public void Check_adding_4_Cards_to_Packages_Constructor()
         {
             List<Card> cards = new List<Card>();
-            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
-            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
-            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
-            cards.Add(new SpellCard("1", "1", 1, Spelltype.normal));
+            cards.Add(new SpellCard("1", "1", 1, "normal"));
+            cards.Add(new SpellCard("1", "1", 1, "normal"));
+            cards.Add(new SpellCard("1", "1", 1, "normal"));
+            cards.Add(new SpellCard("1", "1", 1, "normal"));
 
             Packages package = new Packages(cards);
             Assert.That(Equals(package.package.Count, 0));
@@ -86,7 +89,7 @@ namespace ConsoleApp1.Tests
         {
             Type type = typeof(Card);
 
-            Assert.That(Equals(true, type.IsAbstract));
+            Assert.That(Equals(false, type.IsAbstract));
         }
 
         [Test]
@@ -107,6 +110,51 @@ namespace ConsoleApp1.Tests
             Assert.That(Equals(true, type.IsSubclassOf(type1)));
         }
 
+        [Test]
+        public void Check_if_packages_admin_only()
+        {
+            CardEndpoint cardendpoint = new CardEndpoint();
+            HttpResponse httpresponse = new HttpResponse(new StreamWriter(new MemoryStream()));
+            cardendpoint.packages(httpresponse, "POST", "", "Bearer - randomuser-mtcgToken", "");
+
+            Assert.That(Equals(httpresponse.Code, "401 - admin only"));
+        }
+
+        [Test]
+        public void Check_if_method_correct_users()
+        {
+            UserEndpoint userendpoint = new UserEndpoint();
+            HttpResponse httpresponse = new HttpResponse(new StreamWriter(new MemoryStream()));
+            userendpoint.users(httpresponse, "GET", "", "{\"Username\":\"kienboec\", \"Password\":\"daniel\"}");
+
+            Assert.That(Equals(httpresponse.Code, "400 - Wrong Method"));
+        }
+
+        [Test]
+        public void Check_if_method_correct_sessions()
+        {
+            UserEndpoint userendpoint = new UserEndpoint();
+            HttpResponse httpresponse = new HttpResponse(new StreamWriter(new MemoryStream()));
+            userendpoint.sessions(httpresponse, "GET", "", "{\"Username\":\"kienboec\", \"Password\":\"daniel\"}");
+
+            Assert.That(Equals(httpresponse.Code, "400 - Wrong Method"));
+        }
+
+        [Test]
+        public void Check_if_User_has_20_Money()
+        {
+            Models.User user = new Models.User("", "");
+
+            Assert.That(Equals(user.Money, 20));
+        }
+
+        [Test]
+        public void Check_if_User_has_100_elo()
+        {
+            Models.User user = new Models.User("", "");
+
+            Assert.That(Equals(user.ELO, 100));
+        }
 
     }
 }

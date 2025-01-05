@@ -64,22 +64,22 @@ namespace ConsoleApp1.Repository
 
                     cmd.CommandText = @"
                         CREATE TABLE IF NOT EXISTS Deck (
-                            P_Id INT NOT NULL, 
-                            C_Id INT NOT NULL,
-                            FOREIGN KEY (P_Id) REFERENCES Person(P_Id),
-                            FOREIGN KEY (C_Id) REFERENCES Card(C_Id),
-                            PRIMARY KEY (P_Id, C_Id)
+                            Name VARCHAR(50) NOT NULL, 
+                            CardID VARCHAR(50) NOT NULL,
+                            FOREIGN KEY (Name) REFERENCES Person(Name),
+                            FOREIGN KEY (CardID) REFERENCES Card(CardID),
+                            PRIMARY KEY (Name, CardID)
                         )
                     ";
                     cmd.ExecuteNonQuery();
 
                     cmd.CommandText = @"
                         CREATE TABLE IF NOT EXISTS Stack (
-                            P_Id INT NOT NULL, 
-                            C_Id INT NOT NULL,
-                            FOREIGN KEY (P_Id) REFERENCES Person(P_Id),
-                            FOREIGN KEY (C_Id) REFERENCES Card(C_Id),
-                            PRIMARY KEY (P_Id, C_Id)
+                            Name VARCHAR(50) NOT NULL, 
+                            CardID VARCHAR(50) NOT NULL,
+                            FOREIGN KEY (Name) REFERENCES Person(Name),
+                            FOREIGN KEY (CardID) REFERENCES Card(CardID),
+                            PRIMARY KEY (Name, CardID)
                         )
                     ";
                     cmd.ExecuteNonQuery();
@@ -102,7 +102,7 @@ namespace ConsoleApp1.Repository
             }
 
             BusinessLogic blogic = new BusinessLogic(connectionstring);
-            blogic.Addcard("d7812bcd-1234-4f56-9abc-12de34f56abc", "Secret Goblin", 42, Models.Spelltype.normal, Models.Monstertype.Goblin);
+            blogic.Addcard("d7812bcd-1234-4f56-9abc-12de34f56abc", "Secret Goblin", 42, "normal", "Goblin");
 
         }
     }

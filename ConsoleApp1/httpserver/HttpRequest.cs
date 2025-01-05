@@ -83,20 +83,15 @@ namespace ConsoleApp1.httpserver
                 Body = data.ToString();
             }
 
-            User user = new User("", "");
-            if (Path == "/users" || Path == "/sessions")
-            {
-                user = JsonSerializer.Deserialize<User>(Body);
-            }
 
-            
             UserEndpoint userendpoint = new UserEndpoint();
             CardEndpoint cardendpoint = new CardEndpoint();
             Dictionary<string, Action> paths_and_endpoints = new Dictionary<string, Action> {
 
-                {"/users", () => userendpoint.users(httpresponse, user, Method, DBCONNECTIONSTRING)},
-                {"/sessions", () => userendpoint.sessions(httpresponse, user, Method, DBCONNECTIONSTRING)},
-                {"/packages", () => cardendpoint.packages()  }
+                {"/users", () => userendpoint.users(httpresponse, Method, DBCONNECTIONSTRING, Body)},
+                {"/sessions", () => userendpoint.sessions(httpresponse, Method, DBCONNECTIONSTRING, Body)},
+                {"/packages", () => cardendpoint.packages(httpresponse, Method, DBCONNECTIONSTRING, Authorization, Body)  },
+                {"/transactions/packages", () =>  cardendpoint.transactions_packages(httpresponse, Method, DBCONNECTIONSTRING, Authorization)}
 
             };
 
@@ -111,27 +106,6 @@ namespace ConsoleApp1.httpserver
                 httpresponse.handleresponse();
             }
 
-            
-            /*if (user == null || user.Username == "" || user.Password == "")
-            {
-                httpresponse.Code = "400";
-                httpresponse.Body = "Username or password missing.";
-                httpresponse.handleresponse();
-            }
-            else if (Method == "POST" && Path == "/users")
-            {
-                userendpoint.users(httpresponse, user, Method);
-            }
-            else if (Method == "POST" && Path == "/sessions")
-            {
-                userendpoint.sessions(httpresponse, user, Method);
-            }
-            else
-            {
-                httpresponse.Code = "404";
-                httpresponse.Body = "Path/Method unknown.";
-                httpresponse.handleresponse();
-            }*/
 
         }
 

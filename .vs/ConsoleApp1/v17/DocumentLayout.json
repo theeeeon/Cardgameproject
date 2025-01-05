@@ -3,56 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\repository \u002B db\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\repository \u002B db\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\httpserver\\endpoints\\userendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\httpserver\\endpoints\\userendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5F4D31A5-8698-400D-B5B2-1831886685C0}|ConsoleApp1.Tests\\ConsoleApp1.Tests.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5F4D31A5-8698-400D-B5B2-1831886685C0}|ConsoleApp1.Tests\\ConsoleApp1.Tests.csproj|solutionrelative:consoleapp1.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\httpserver\\httpresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\httpserver\\httpresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\models\\monstercard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\models\\monstercard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\models\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\models\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\models\\spellcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\models\\spellcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\models\\packages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\models\\packages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\httpserver\\endpoints\\userendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\httpserver\\endpoints\\userendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\logic\\businesslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\logic\\businesslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\httpserver\\endpoints\\cardendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\httpserver\\endpoints\\cardendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\logic\\battlelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\logic\\battlelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\httpserver\\httprequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -61,6 +25,42 @@
     {
       "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\httpserver\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\httpserver\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\httpserver\\endpoints\\cardendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\httpserver\\endpoints\\cardendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\httpserver\\httpresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\httpserver\\httpresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\repository \u002B db\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\repository \u002B db\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\models\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\models\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\logic\\businesslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\logic\\businesslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\logic\\battlelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\logic\\battlelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\models\\monstercard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\models\\monstercard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\models\\spellcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\models\\spellcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\models\\packages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\models\\packages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3CE4A9FE-2DB6-42BF-A8FC-A2028899AD54}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\theow\\documents\\informatik technikum sem 3\\se 1 sem 3\\projekt\\consoleapp1\\consoleapp1\\diagram.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
@@ -74,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,126 +82,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Card.cs",
-              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Models\\Card.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\Models\\Card.cs",
-              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Models\\Card.cs",
-              "RelativeToolTip": "ConsoleApp1\\Models\\Card.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAqwAoAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T20:58:16.126Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Db.cs",
-              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Repository \u002B DB\\Db.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\Repository \u002B DB\\Db.cs",
-              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Repository \u002B DB\\Db.cs",
-              "RelativeToolTip": "ConsoleApp1\\Repository \u002B DB\\Db.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAQwGgAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T22:42:47.676Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "SpellCard.cs",
-              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Models\\SpellCard.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\Models\\SpellCard.cs",
-              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Models\\SpellCard.cs",
-              "RelativeToolTip": "ConsoleApp1\\Models\\SpellCard.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAALAAAAAAAAAA==",
+              "Title": "CardEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\httpserver\\Endpoints\\CardEndpoint.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\httpserver\\Endpoints\\CardEndpoint.cs",
+              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\httpserver\\Endpoints\\CardEndpoint.cs",
+              "RelativeToolTip": "ConsoleApp1\\httpserver\\Endpoints\\CardEndpoint.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T14:36:25.446Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UnitTest1.cs",
-              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1.Tests\\UnitTest1.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1.Tests\\UnitTest1.cs",
-              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1.Tests\\UnitTest1.cs",
-              "RelativeToolTip": "ConsoleApp1.Tests\\UnitTest1.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAUwGcAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T07:04:30.397Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Packages.cs",
-              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Models\\Packages.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\Models\\Packages.cs",
-              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Models\\Packages.cs",
-              "RelativeToolTip": "ConsoleApp1\\Models\\Packages.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T15:08:12.891Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MonsterCard.cs",
-              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Models\\MonsterCard.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\Models\\MonsterCard.cs",
-              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Models\\MonsterCard.cs",
-              "RelativeToolTip": "ConsoleApp1\\Models\\MonsterCard.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T12:53:52.438Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Program.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\Program.cs",
-              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Program.cs",
-              "RelativeToolTip": "ConsoleApp1\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T21:52:10.545Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HttpResponse.cs",
-              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\httpserver\\HttpResponse.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\httpserver\\HttpResponse.cs",
-              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\httpserver\\HttpResponse.cs",
-              "RelativeToolTip": "ConsoleApp1\\httpserver\\HttpResponse.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAYwCgAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T14:56:29.285Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Models\\User.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Models\\User.cs",
-              "RelativeToolTip": "ConsoleApp1\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T21:57:25.262Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UserEndpoint.cs",
-              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\httpserver\\Endpoints\\UserEndpoint.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\httpserver\\Endpoints\\UserEndpoint.cs",
-              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\httpserver\\Endpoints\\UserEndpoint.cs",
-              "RelativeToolTip": "ConsoleApp1\\httpserver\\Endpoints\\UserEndpoint.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAQwBAAAABpAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T15:06:08.348Z"
+              "WhenOpened": "2025-01-03T23:31:54.989Z"
             },
             {
               "$type": "Document",
@@ -211,25 +100,25 @@
               "RelativeDocumentMoniker": "ConsoleApp1\\Logic\\BusinessLogic.cs",
               "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Logic\\BusinessLogic.cs",
               "RelativeToolTip": "ConsoleApp1\\Logic\\BusinessLogic.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIBAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-19T13:11:15.945Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CardEndpoint.cs",
-              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\httpserver\\Endpoints\\CardEndpoint.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\httpserver\\Endpoints\\CardEndpoint.cs",
-              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\httpserver\\Endpoints\\CardEndpoint.cs",
-              "RelativeToolTip": "ConsoleApp1\\httpserver\\Endpoints\\CardEndpoint.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "Card.cs",
+              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Models\\Card.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Models\\Card.cs",
+              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Models\\Card.cs",
+              "RelativeToolTip": "ConsoleApp1\\Models\\Card.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T23:31:54.989Z"
+              "WhenOpened": "2024-09-16T20:58:16.126Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "Battlelogic.cs",
               "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Logic\\Battlelogic.cs",
               "RelativeDocumentMoniker": "ConsoleApp1\\Logic\\Battlelogic.cs",
@@ -241,27 +130,138 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\httpserver\\Endpoints\\UserEndpoint.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\httpserver\\Endpoints\\UserEndpoint.cs",
+              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\httpserver\\Endpoints\\UserEndpoint.cs",
+              "RelativeToolTip": "ConsoleApp1\\httpserver\\Endpoints\\UserEndpoint.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAQwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T15:06:08.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MonsterCard.cs",
+              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Models\\MonsterCard.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Models\\MonsterCard.cs",
+              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Models\\MonsterCard.cs",
+              "RelativeToolTip": "ConsoleApp1\\Models\\MonsterCard.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T12:53:52.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Packages.cs",
+              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Models\\Packages.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Models\\Packages.cs",
+              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Models\\Packages.cs",
+              "RelativeToolTip": "ConsoleApp1\\Models\\Packages.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T15:08:12.891Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 13,
+              "Title": "SpellCard.cs",
+              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Models\\SpellCard.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Models\\SpellCard.cs",
+              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Models\\SpellCard.cs",
+              "RelativeToolTip": "ConsoleApp1\\Models\\SpellCard.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T14:36:25.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "HttpRequest.cs",
               "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\httpserver\\HttpRequest.cs",
               "RelativeDocumentMoniker": "ConsoleApp1\\httpserver\\HttpRequest.cs",
               "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\httpserver\\HttpRequest.cs",
               "RelativeToolTip": "ConsoleApp1\\httpserver\\HttpRequest.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAArwEAAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAYwAwAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-26T14:49:19.59Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 1,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1.Tests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1.Tests\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1.Tests\\UnitTest1.cs",
+              "RelativeToolTip": "ConsoleApp1.Tests\\UnitTest1.cs",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAowJMAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T07:04:30.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "HttpServer.cs",
               "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\httpserver\\HttpServer.cs",
               "RelativeDocumentMoniker": "ConsoleApp1\\httpserver\\HttpServer.cs",
               "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\httpserver\\HttpServer.cs",
               "RelativeToolTip": "ConsoleApp1\\httpserver\\HttpServer.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwCQAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwB4AAABjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-26T14:44:53.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HttpResponse.cs",
+              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\httpserver\\HttpResponse.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\httpserver\\HttpResponse.cs",
+              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\httpserver\\HttpResponse.cs",
+              "RelativeToolTip": "ConsoleApp1\\httpserver\\HttpResponse.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwAsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T14:56:29.285Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Db.cs",
+              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Repository \u002B DB\\Db.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Repository \u002B DB\\Db.cs",
+              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Repository \u002B DB\\Db.cs",
+              "RelativeToolTip": "ConsoleApp1\\Repository \u002B DB\\Db.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T22:42:47.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Models\\User.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Models\\User.cs",
+              "RelativeToolTip": "ConsoleApp1\\Models\\User.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAIwAgAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T21:57:25.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Program.cs",
+              "ToolTip": "C:\\Users\\theow\\Documents\\Informatik Technikum Sem 3\\SE 1 Sem 3\\Projekt\\ConsoleApp1\\ConsoleApp1\\Program.cs",
+              "RelativeToolTip": "ConsoleApp1\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T21:52:10.545Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -277,10 +277,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
             }
           ]
         }

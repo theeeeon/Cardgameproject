@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.Models
 {
-    class User
+    public class User
     {
         public string Username { get; private set; } = "";
         public string Password { get; private set; } = "";
