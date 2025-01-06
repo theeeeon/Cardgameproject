@@ -113,12 +113,13 @@ namespace ConsoleApp1.httpserver.Endpoints
             
         }
 
-        public void deck(HttpResponse httpresponse, String Method, string DBCONNECTIONSTRING, string Authorization)
+        public void deck(HttpResponse httpresponse, String Method, string DBCONNECTIONSTRING, string Authorization, string body)
         {
+            Authorization = Authorization.Replace("Bearer ", "").Replace("-mtcgToken", "");
+            BusinessLogic repository = new BusinessLogic(DBCONNECTIONSTRING);
+
             if(Method == "GET")
             {
-                Authorization = Authorization.Replace("Bearer ", "").Replace("-mtcgToken", "");
-                BusinessLogic repository = new BusinessLogic(DBCONNECTIONSTRING);
 
                 if (repository.Checkusernameexists(Authorization))
                 {
@@ -134,8 +135,21 @@ namespace ConsoleApp1.httpserver.Endpoints
             }
             else if(Method == "PUT")
             {
-                httpresponse.Code = "100 - addicted";
-                httpresponse.handleresponse();
+                List<string> cards = JsonConvert.DeserializeObject<List<string>>(body);
+                try
+                {
+                    repository.CreateDeck(cards, Authorization);
+                    httpresponse.Code = "200";
+                    httpresponse.handleresponse();
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                    httpresponse.Code = "400 - Bad Request";
+                    httpresponse.handleresponse();
+                }
+                
+
             }
             else
             {

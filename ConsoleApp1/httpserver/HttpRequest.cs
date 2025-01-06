@@ -93,7 +93,10 @@ namespace ConsoleApp1.httpserver
                 {"/packages", () => cardendpoint.packages(httpresponse, Method, DBCONNECTIONSTRING, Authorization, Body)  },
                 {"/transactions/packages", () =>  cardendpoint.transactions_packages(httpresponse, Method, DBCONNECTIONSTRING, Authorization)},
                 {"/cards", () => cardendpoint.cards(httpresponse, Method, DBCONNECTIONSTRING, Authorization) },
-                {"/deck", () => cardendpoint.deck(httpresponse, Method, DBCONNECTIONSTRING, Authorization) }
+                {"/deck", () => cardendpoint.deck(httpresponse, Method, DBCONNECTIONSTRING, Authorization, Body) },
+                {"/stats", () => userendpoint.stats(httpresponse, Method, DBCONNECTIONSTRING, Authorization) },
+                {"/scoreboard", () => userendpoint.scoreboard(httpresponse, Method, DBCONNECTIONSTRING, Authorization ) },
+                {"/deck?format=plain", () => cardendpoint.deck(httpresponse, Method, DBCONNECTIONSTRING, Authorization, Body) }
 
             };
 

@@ -45,7 +45,8 @@ namespace ConsoleApp1.Repository
                             name VARCHAR(50) UNIQUE NOT NULL,
                             password VARCHAR(100) NOT NULL,
                             elo INT,
-                            coins INT
+                            coins INT,
+                            games_played INT
                         )
                     ";
                     cmd.ExecuteNonQuery();

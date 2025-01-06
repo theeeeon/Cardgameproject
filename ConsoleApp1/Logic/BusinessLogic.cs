@@ -86,8 +86,8 @@ namespace ConsoleApp1.Logic
                     using (IDbCommand command = connection.CreateCommand())
                     {
                         connection.Open();
-                        command.CommandText = @"INSERT INTO person (name, password, elo, coins)
-                                            VALUES (@name, @password, @elo, @coins)"
+                        command.CommandText = @"INSERT INTO person (name, password, elo, coins, games_played)
+                                            VALUES (@name, @password, @elo, @coins, @games_played)"
                         ;
 
                         var p_username = command.CreateParameter();
@@ -114,7 +114,13 @@ namespace ConsoleApp1.Logic
                         p_coins.Value = user.Money;
                         command.Parameters.Add(p_coins);
 
-                        command.ExecuteNonQuery();
+                        var games_played = command.CreateParameter();
+                        games_played.DbType = DbType.Int32;
+                        games_played.ParameterName = "games_played";
+                        games_played.Value = 0;
+                        command.Parameters.Add(games_played);
+
+                    command.ExecuteNonQuery();
                     }
                 }
 
@@ -538,5 +544,215 @@ namespace ConsoleApp1.Logic
             return cards;
         }
 
+        public bool CardinStackCheck(string id, string username)
+        {
+            using (IDbConnection connection = new NpgsqlConnection(connectionstring))
+            {
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = @"SELECT Name, CardID
+                                        FROM Stack
+                                        WHERE Name = @name AND CardID = @cardid";
+
+                    connection.Open();
+
+                    var p_username = command.CreateParameter();
+                    p_username.DbType = DbType.String;
+                    p_username.ParameterName = "name";
+                    p_username.Value = username;
+                    command.Parameters.Add(p_username);
+
+                    var p_id = command.CreateParameter();
+                    p_id.DbType = DbType.String;
+                    p_id.ParameterName = "cardid";
+                    p_id.Value = id;
+                    command.Parameters.Add(p_id);
+
+                    using (IDataReader reader = command.ExecuteReader())
+                    {
+                        return reader.Read();
+                    }
+                }
+            }
         }
+
+        public void CreateDeck(List<string> cards, string username)
+        {
+            if(cards.Count != 4)
+            {
+                throw new Exception("Not 4 Cards!");
+            }
+            foreach(string card in cards)
+            {
+                if(CardinStackCheck(card, username) == false)
+                {
+                    throw new Exception("Not own Card!");
+                }
+            }
+
+            if(DeckexistsalreadyCheck(username) == false)
+            {
+                foreach(string card in cards)
+                {
+                    Addcardtodeck(card, username);
+                }
+            }
+            else
+            {
+                Deletedeck(username);
+                foreach (string card in cards)
+                {
+                    Addcardtodeck(card, username);
+                }
+            }
+
+
+        }
+
+        public void Deletedeck(string username)
+        {
+            using (IDbConnection connection = new NpgsqlConnection(connectionstring))
+            {
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    connection.Open();
+                    command.CommandText = @"DELETE FROM Deck
+                                WHERE Name = @name"
+                    ;
+
+                    var name = command.CreateParameter();
+                    name.DbType = DbType.String;
+                    name.ParameterName = "name";
+                    name.Value = username;
+                    command.Parameters.Add(name);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void Addcardtodeck(string id, string username)
+        {
+            using (IDbConnection connection = new NpgsqlConnection(connectionstring))
+            {
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    connection.Open();
+                    command.CommandText = @"INSERT INTO Deck (Name, CardID)
+                                            VALUES (@Name, @CardID)"
+                    ;
+
+                    var name = command.CreateParameter();
+                    name.DbType = DbType.String;
+                    name.ParameterName = "Name";
+                    name.Value = username;
+                    command.Parameters.Add(name);
+
+                    var ID = command.CreateParameter();
+                    ID.DbType = DbType.String;
+                    ID.ParameterName = "CardID";
+                    ID.Value = id;
+                    command.Parameters.Add(ID);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public bool DeckexistsalreadyCheck(string username)
+        {
+            using (IDbConnection connection = new NpgsqlConnection(connectionstring))
+            {
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = @"SELECT *
+                                        FROM Deck
+                                        WHERE Name = @name";
+
+                    connection.Open();
+
+                    var p_username = command.CreateParameter();
+                    p_username.DbType = DbType.String;
+                    p_username.ParameterName = "name";
+                    p_username.Value = username;
+                    command.Parameters.Add(p_username);
+
+                    using (IDataReader reader = command.ExecuteReader())
+                    {
+                        return reader.Read();
+                    }
+                }
+            }
+        }
+
+        public Dictionary<string, int> GetELO(string username)
+        {
+
+            Dictionary<string, int> ELO = new Dictionary<string, int> {
+
+                {"ELO", 100},
+                {"Games Played", 0}
+
+            };
+
+            using (IDbConnection connection = new NpgsqlConnection(connectionstring))
+            {
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = @"SELECT ELO, games_played
+                                        FROM Person
+                                        WHERE Name = @name";
+
+                    connection.Open();
+
+                    var p_username = command.CreateParameter();
+                    p_username.DbType = DbType.String;
+                    p_username.ParameterName = "name";
+                    p_username.Value = username;
+                    command.Parameters.Add(p_username);
+
+                    using (IDataReader reader = command.ExecuteReader())
+                    {
+                        if(reader.Read())
+                        {
+                            ELO["ELO"] = (int)reader["ELO"];
+                            ELO["Games Played"] = (int)reader["games_played"];
+                        }
+                    }
+                }
+            }
+
+            return ELO;
+        }
+
+        public List<Tuple<string, int>> GetAllELO()
+        {
+            List<Tuple<string, int>> list = new List<Tuple<string, int>>();
+
+            using (IDbConnection connection = new NpgsqlConnection(connectionstring))
+            {
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = @"SELECT name, elo
+                                        FROM Person";
+
+                    connection.Open();
+
+                    using (IDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            list.Add(Tuple.Create(reader["name"].ToString(), (int)reader["elo"]));
+                        }
+                    }
+                }
+            }
+
+
+            list.Sort((x, y) => y.Item2.CompareTo(x.Item2));
+
+            return list;
+        }
+
+    }
 }

@@ -181,7 +181,7 @@ namespace ConsoleApp1.Tests
         {
             CardEndpoint cardendpoint = new CardEndpoint();
             HttpResponse httpresponse = new HttpResponse(new StreamWriter(new MemoryStream()));
-            cardendpoint.deck(httpresponse, "POST", "", "Bearer - user-mtcgToken");
+            cardendpoint.deck(httpresponse, "POST", "", "Bearer - user-mtcgToken", "");
 
             Assert.That(Equals(httpresponse.Code, "400 - Wrong Method"));
         }
@@ -194,6 +194,50 @@ namespace ConsoleApp1.Tests
             cardendpoint.packages(httpresponse, "GET", "", "Bearer - user-mtcgToken", "");
 
             Assert.That(Equals(httpresponse.Code, "400 - Wrong Method"));
+        }
+
+        [Test]
+        public void Check_if_db_static()
+        {
+            Type type = typeof(Db);
+
+            Assert.That(Equals(true, type.IsAbstract && type.IsSealed));
+        }
+
+        [Test]
+        public void Check_if_scoreboard_Method()
+        {
+            UserEndpoint userendpoint = new UserEndpoint();
+            HttpResponse httpresponse = new HttpResponse(new StreamWriter(new MemoryStream()));
+            userendpoint.scoreboard(httpresponse, "POST", "", "Bearer - user-mtcgToken");
+
+            Assert.That(Equals(httpresponse.Code, "400 - Wrong Method"));
+        }
+
+        [Test]
+        public void Check_if_stats_method()
+        {
+            UserEndpoint userendpoint = new UserEndpoint();
+            HttpResponse httpresponse = new HttpResponse(new StreamWriter(new MemoryStream()));
+            userendpoint.stats(httpresponse, "POST", "", "Bearer - user-mtcgToken");
+
+            Assert.That(Equals(httpresponse.Code, "400 - Wrong Method"));
+        }
+
+        [Test]
+        public void Check_if_httpresponse_Version()
+        {
+            HttpResponse httpresponse = new HttpResponse(new StreamWriter(new MemoryStream()));
+
+            Assert.That(Equals(httpresponse.Version, "HTTP/1.1"));
+        }
+
+        [Test]
+        public void Check_if_httpresponse_Contenttype()
+        {
+            HttpResponse httpresponse = new HttpResponse(new StreamWriter(new MemoryStream()));
+
+            Assert.That(Equals(httpresponse.Headername + " " + httpresponse.Headervalue , "Content-type JSON"));
         }
 
     }

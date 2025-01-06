@@ -8,6 +8,7 @@ using ConsoleApp1.httpserver;
 using ConsoleApp1.Logic;
 using ConsoleApp1.Models;
 using ConsoleApp1.Repository;
+using Newtonsoft.Json;
 
 namespace ConsoleApp1.httpserver.Endpoints
 {
@@ -17,7 +18,7 @@ namespace ConsoleApp1.httpserver.Endpoints
 
         public void users(HttpResponse httpresponse, String method, string DBCONNECTIONSTRING, string body)
         {
-            var user = JsonSerializer.Deserialize<User>(body);
+            var user = JsonConvert.DeserializeObject<User>(body);
             BusinessLogic repository = new BusinessLogic(DBCONNECTIONSTRING);
             if(method == "POST")
             {
@@ -46,14 +47,14 @@ namespace ConsoleApp1.httpserver.Endpoints
         public void sessions(HttpResponse httpresponse, String method, string DBCONNECTIONSTRING, string body)
         {
             BusinessLogic repository = new BusinessLogic(DBCONNECTIONSTRING);
-            var user = JsonSerializer.Deserialize<User>(body);
+            var user = JsonConvert.DeserializeObject<User>(body);
 
             if (method == "POST")
             {
                 if (repository.Checkusernameexists(user.Username) == false)
                 {
                     httpresponse.Code = "400 - Does not exist";
-                    httpresponse.Body = "";
+                    httpresponse.handleresponse();
                 }
                 else if (repository.Checkpasswordcorrect(user.Password, user.Username) == false)
                 {
@@ -73,6 +74,58 @@ namespace ConsoleApp1.httpserver.Endpoints
                 httpresponse.handleresponse();
             }
 
+        }
+
+        public void stats(HttpResponse httpresponse, String Method, string DBCONNECTIONSTRING, string Authorization)
+        {
+            BusinessLogic repository = new BusinessLogic(DBCONNECTIONSTRING);
+            Authorization = Authorization.Replace("Bearer ", "").Replace("-mtcgToken", "");
+
+            if (Method == "GET")
+            {
+                if (repository.Checkusernameexists(Authorization))
+                {
+                    httpresponse.Code = "200";
+                    httpresponse.Body = JsonConvert.SerializeObject(repository.GetELO(Authorization));
+                    httpresponse.handleresponse();
+                }
+                else
+                {
+                    httpresponse.Code = "401 - Wrong Authorization";
+                    httpresponse.handleresponse();
+                }
+            }
+            else
+            {
+                httpresponse.Code = "400 - Wrong Method";
+                httpresponse.handleresponse();
+            }
+        }
+
+        public void scoreboard(HttpResponse httpresponse, String Method, string DBCONNECTIONSTRING, string Authorization)
+        {
+            BusinessLogic repository = new BusinessLogic(DBCONNECTIONSTRING);
+            Authorization = Authorization.Replace("Bearer ", "").Replace("-mtcgToken", "");
+
+            if (Method == "GET")
+            {
+                if (repository.Checkusernameexists(Authorization))
+                {
+                    httpresponse.Code = "200";
+                    httpresponse.Body = JsonConvert.SerializeObject(repository.GetAllELO());
+                    httpresponse.handleresponse();
+                }
+                else
+                {
+                    httpresponse.Code = "401 - Wrong Authorization";
+                    httpresponse.handleresponse();
+                }
+            }
+            else
+            {
+                httpresponse.Code = "400 - Wrong Method";
+                httpresponse.handleresponse();
+            }
         }
 
     }
