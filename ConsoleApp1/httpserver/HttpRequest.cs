@@ -91,7 +91,9 @@ namespace ConsoleApp1.httpserver
                 {"/users", () => userendpoint.users(httpresponse, Method, DBCONNECTIONSTRING, Body)},
                 {"/sessions", () => userendpoint.sessions(httpresponse, Method, DBCONNECTIONSTRING, Body)},
                 {"/packages", () => cardendpoint.packages(httpresponse, Method, DBCONNECTIONSTRING, Authorization, Body)  },
-                {"/transactions/packages", () =>  cardendpoint.transactions_packages(httpresponse, Method, DBCONNECTIONSTRING, Authorization)}
+                {"/transactions/packages", () =>  cardendpoint.transactions_packages(httpresponse, Method, DBCONNECTIONSTRING, Authorization)},
+                {"/cards", () => cardendpoint.cards(httpresponse, Method, DBCONNECTIONSTRING, Authorization) },
+                {"/deck", () => cardendpoint.deck(httpresponse, Method, DBCONNECTIONSTRING, Authorization) }
 
             };
 

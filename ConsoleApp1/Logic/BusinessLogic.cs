@@ -411,5 +411,132 @@ namespace ConsoleApp1.Logic
             }
         }
 
+        public List<Card> Getcards(string username)
+        {
+            List<string> ids = new List<string>();
+            List<Card> cards = new List<Card>();
+
+            using (IDbConnection connection = new NpgsqlConnection(connectionstring))
+            {
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    connection.Open();
+                    command.CommandText = @"SELECT CardID FROM Stack
+                                            WHERE Name = @Name"
+                    ;
+
+                    var Name = command.CreateParameter();
+                    Name.DbType = DbType.String;
+                    Name.ParameterName = "Name";
+                    Name.Value = username;
+                    command.Parameters.Add(Name);
+
+                    using (IDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            ids.Add(reader["CardID"].ToString());
+                        }
+
+                    }
+                }
+            }
+
+            foreach(string id in ids)
+            {
+                try
+                {
+                    cards.Add(Getcard(id));
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+
+            return cards;
+        }
+
+        public Card Getcard(string id)
+        {
+
+            using (IDbConnection connection = new NpgsqlConnection(connectionstring))
+            {
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    connection.Open();
+                    command.CommandText = @"SELECT * FROM Card
+                                            WHERE CardID = @CardID"
+                    ;
+
+                    var Name = command.CreateParameter();
+                    Name.DbType = DbType.String;
+                    Name.ParameterName = "CardID";
+                    Name.Value = id;
+                    command.Parameters.Add(Name);
+
+                    using (IDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            Card card = new Card(id, reader["name"].ToString(), (int)reader["damage"], reader["spelltype"].ToString());
+                            return card;
+                        }
+                        else
+                        {
+                            throw new Exception("Card not in card Table");
+                        }
+
+                    }
+                }
+            }
+        }
+
+        public List<Card> Getdeckcards(string username)
+        {
+            List<string> ids = new List<string>();
+            List<Card> cards = new List<Card>();
+
+            using (IDbConnection connection = new NpgsqlConnection(connectionstring))
+            {
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    connection.Open();
+                    command.CommandText = @"SELECT CardID FROM Deck
+                                            WHERE Name = @Name"
+                    ;
+
+                    var Name = command.CreateParameter();
+                    Name.DbType = DbType.String;
+                    Name.ParameterName = "Name";
+                    Name.Value = username;
+                    command.Parameters.Add(Name);
+
+                    using (IDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            ids.Add(reader["CardID"].ToString());
+                        }
+
+                    }
+                }
+            }
+
+            foreach (string id in ids)
+            {
+                try
+                {
+                    cards.Add(Getcard(id));
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+
+            return cards;
+        }
+
         }
 }

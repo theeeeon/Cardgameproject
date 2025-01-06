@@ -28,15 +28,24 @@ namespace ConsoleApp1.httpserver
             while (true)
             {
                 var clientSocket = httpServer.AcceptTcpClient();
-                using var writer = new StreamWriter(clientSocket.GetStream()) { AutoFlush = true };
+                /*using var writer = new StreamWriter(clientSocket.GetStream()) { AutoFlush = true };
                 using var reader = new StreamReader(clientSocket.GetStream());
                 var httpresponse = new HttpResponse(writer);
-                var httprequest = new HttpRequest(reader, httpresponse, DBCONNECTIONSTRING);
-                //Thread thread = new Thread(() => );
-                //thread.Start();
-                httprequest.handlerequest();
+                var httprequest = new HttpRequest(reader, httpresponse, DBCONNECTIONSTRING);*/
+                Thread thread = new Thread(() => Handleclient(clientSocket));
+                thread.Start();
+                //httprequest.handlerequest();
             }
 
+        }
+
+        public void Handleclient(TcpClient ding)
+        {
+            using var writer = new StreamWriter(ding.GetStream()) { AutoFlush = true };
+            using var reader = new StreamReader(ding.GetStream());
+            var httpresponse = new HttpResponse(writer);
+            var httprequest = new HttpRequest(reader, httpresponse, DBCONNECTIONSTRING);
+            httprequest.handlerequest();
         }
 
 

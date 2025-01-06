@@ -156,6 +156,46 @@ namespace ConsoleApp1.Tests
             Assert.That(Equals(user.ELO, 100));
         }
 
+        [Test]
+        public void Check_if_cards_Method()
+        {
+            CardEndpoint cardendpoint = new CardEndpoint();
+            HttpResponse httpresponse = new HttpResponse(new StreamWriter(new MemoryStream()));
+            cardendpoint.cards(httpresponse, "POST", "", "Bearer - user-mtcgToken");
+
+            Assert.That(Equals(httpresponse.Code, "400 - Wrong Method"));
+        }
+
+        [Test]
+        public void Check_if_transactions_packages_Method()
+        {
+            CardEndpoint cardendpoint = new CardEndpoint();
+            HttpResponse httpresponse = new HttpResponse(new StreamWriter(new MemoryStream()));
+            cardendpoint.transactions_packages(httpresponse, "GET", "", "Bearer - user-mtcgToken");
+
+            Assert.That(Equals(httpresponse.Code, "400 - Wrong Method"));
+        }
+
+        [Test]
+        public void Check_if_deck_Method()
+        {
+            CardEndpoint cardendpoint = new CardEndpoint();
+            HttpResponse httpresponse = new HttpResponse(new StreamWriter(new MemoryStream()));
+            cardendpoint.deck(httpresponse, "POST", "", "Bearer - user-mtcgToken");
+
+            Assert.That(Equals(httpresponse.Code, "400 - Wrong Method"));
+        }
+
+        [Test]
+        public void Check_if_packages_Method()
+        {
+            CardEndpoint cardendpoint = new CardEndpoint();
+            HttpResponse httpresponse = new HttpResponse(new StreamWriter(new MemoryStream()));
+            cardendpoint.packages(httpresponse, "GET", "", "Bearer - user-mtcgToken", "");
+
+            Assert.That(Equals(httpresponse.Code, "400 - Wrong Method"));
+        }
+
     }
 }
 
